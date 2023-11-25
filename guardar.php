@@ -18,7 +18,7 @@ echo $frase;
 
 
 // Preparar la sentencia SQL
-$sql = "INSERT INTO frases (frase, aux, campo, fecha_planificada, fecha_limite, periodicidad) 
+$sql = "INSERT INTO frases (frase, aux, campo, fplanificada, flimite, periodicidad) 
         VALUES ('$frase', '$aux', '$campo', '$fechaPlanificada', '$fechaLimite', '$periodicidad')";
 
 // Ejecutar la sentencia
