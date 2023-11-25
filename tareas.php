@@ -11,6 +11,10 @@
             justify-content: space-between;
             align-items: center;
         }
+
+        .eliminar-btn {
+            margin-left: auto;
+        }
     </style>
 </head>
 <body>
@@ -50,12 +54,12 @@
                 while($row = $result->fetch_assoc()) {
                     echo "<li>";
                     echo "<div>";
-                    echo "<strong>Tarea:</strong> " . $row["tarea"] . "<br>";
-                    echo "<strong>Aux:</strong> " . $row["aux"] . "<br>";
-                    echo "<strong>Campo:</strong> " . $row["campo"] . "<br>";
-                    echo "<strong>Fecha Planificada:</strong> " . $row["fplanificada"] . "<br>";
-                    echo "<strong>Fecha Límite:</strong> " . $row["flimite"] . "<br>";
-                    echo "<strong>Periodicidad:</strong> " . $row["periodicidad"] . "<br>";
+                    echo $row["tarea"] . "<br>";
+                    echo $row["aux"] . "<br>";
+                    echo $row["campo"] . "<br>";
+                    echo $row["fplanificada"] . "<br>";
+                    echo $row["flimite"] . "<br>";
+                    echo $row["periodicidad"] . "<br>";
                     echo "</div>";
                     echo "<button class='eliminar-btn' onclick='eliminarTarea(" . $row["id"] . ")'>Eliminar</button>";
                     echo "</li>";
