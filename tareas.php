@@ -4,55 +4,7 @@
     <meta charset="UTF-8">
     <title>Listado de Tareas</title>
     <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            background-color: #f4f4f4;
-            margin: 0;
-            padding: 0;
-        }
-
-        h1 {
-            text-align: center;
-            color: #333;
-        }
-
-        ul {
-            padding: 0;
-            margin: 20px;
-            list-style-type: none; /* Eliminar la viñeta de la lista */
-        }
-
-        li {
-            background-color: #fff;
-            border: 1px solid #ddd;
-            margin: 5px 0;
-            padding: 10px;
-            border-radius: 5px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            transition: background-color 0.3s ease;
-            position: relative;
-        }
-
-        li:hover {
-            background-color: #f9f9f9;
-        }
-
-        .eliminar-btn {
-            background-color: #ff4d4d;
-            color: #fff;
-            border: none;
-            padding: 5px 10px;
-            border-radius: 3px;
-            cursor: pointer;
-            position: absolute;
-            top: 5px;
-            right: 5px;
-            transition: background-color 0.3s ease;
-        }
-
-        .eliminar-btn:hover {
-            background-color: #ff1a1a;
-        }
+        /* ... (tu estilo CSS) */
     </style>
 </head>
 <body>
@@ -90,7 +42,13 @@
             if ($result->num_rows > 0) {
                 // Iterar sobre los resultados y mostrar cada tarea
                 while($row = $result->fetch_assoc()) {
-                    echo "<li>" . $row["tarea"] . " <button class='eliminar-btn' onclick='eliminarTarea(" . $row["id"] . ")'>Eliminar</button></li>";
+                    echo "<li><strong>Tarea:</strong> " . $row["tarea"] . "<br>";
+                    echo "<strong>Aux:</strong> " . $row["aux"] . "<br>";
+                    echo "<strong>Campo:</strong> " . $row["campo"] . "<br>";
+                    echo "<strong>Fecha Planificada:</strong> " . $row["fplanificada"] . "<br>";
+                    echo "<strong>Fecha Límite:</strong> " . $row["flimite"] . "<br>";
+                    echo "<strong>Periodicidad:</strong> " . $row["periodicidad"] . "<br>";
+                    echo "<button class='eliminar-btn' onclick='eliminarTarea(" . $row["id"] . ")'>Eliminar</button></li>";
                 }
             } else {
                 echo "<li>No hay tareas disponibles.</li>";
@@ -112,6 +70,5 @@
     <form id="eliminar-form" method="post" style="display: none;">
         <input type="hidden" name="eliminar_tarea" value="">
     </form>
-
 </body>
-</html>
+</html
