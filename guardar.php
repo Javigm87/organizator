@@ -5,7 +5,7 @@ error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
 // Obtener los datos del formulario
-$frase = $_POST['frase'];
+$tarea = $_POST['tarea'];
 $aux = $_POST['aux'];
 $campo = $_POST['campo'];
 $fechaPlanificada = $_POST['fechaPlanificada'];
@@ -18,12 +18,12 @@ $periodicidad = $_POST['periodicidad'];
 
 
 // Preparar la sentencia SQL
-$sql = "INSERT INTO frases (frase, aux, campo, fplanificada, flimite, periodicidad) 
-        VALUES ('$frase', '$aux', '$campo', '$fechaPlanificada', '$fechaLimite', '$periodicidad')";
+$sql = "INSERT INTO tareas (tarea, aux, campo, fplanificada, flimite, periodicidad) 
+        VALUES ('$tarea', '$aux', '$campo', '$fechaPlanificada', '$fechaLimite', '$periodicidad')";
 
 // Ejecutar la sentencia
 if ($conexion->query($sql) === TRUE) {
-    echo "Frase guardada exitosamente.";
+    echo "Tarea guardada exitosamente.";
 } else {
     echo "Error: " . $sql . "<br>" . $conexion->error;
 }

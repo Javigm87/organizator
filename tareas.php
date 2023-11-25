@@ -65,23 +65,23 @@
             include 'conexion.php';
 
             // Verificar si se ha enviado el formulario (si se hizo clic en un botón eliminar)
-            if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['eliminar_frase'])) {
-                // Obtener el ID de la frase a eliminar
-                $id_frase_a_eliminar = $_POST['eliminar_frase'];
+            if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['eliminar_tarea'])) {
+                // Obtener el ID de la tarea a eliminar
+                $id_tarea_a_eliminar = $_POST['eliminar_tarea'];
 
-                // Preparar la consulta SQL para eliminar la frase
-                $sql_eliminar = "DELETE FROM frases WHERE id = $id_frase_a_eliminar";   
+                // Preparar la consulta SQL para eliminar la tarea
+                $sql_eliminar = "DELETE FROM tareas WHERE id = $id_tarea_a_eliminar";   
 
                 // Ejecutar la consulta
                 if ($conexion->query($sql_eliminar) === TRUE) {
-                    echo "<p>Frase eliminada correctamente.</p>";
+                    echo "<p>Tarea eliminada correctamente.</p>";
                 } else {
-                    echo "<p>Error al eliminar la frase: " . $conexion->error . "</p>";
+                    echo "<p>Error al eliminar la tarea: " . $conexion->error . "</p>";
                 }
             }
 
             // Preparar la consulta SQL para obtener todas las tareas
-            $sql = "SELECT * FROM frases";
+            $sql = "SELECT * FROM tareas";
 
             // Ejecutar la consulta
             $result = $conexion->query($sql);
@@ -90,7 +90,7 @@
             if ($result->num_rows > 0) {
                 // Iterar sobre los resultados y mostrar cada tarea
                 while($row = $result->fetch_assoc()) {
-                    echo "<li>" . $row["frase"] . " <button class='eliminar-btn' onclick='eliminarFrase(" . $row["id"] . ")'>Eliminar</button></li>";
+                    echo "<li>" . $row["tarea"] . " <button class='eliminar-btn' onclick='eliminarTarea(" . $row["id"] . ")'>Eliminar</button></li>";
                 }
             } else {
                 echo "<li>No hay tareas disponibles.</li>";
@@ -102,15 +102,15 @@
     </ul>
 
     <script>
-        function eliminarFrase(idFrase) {
-            // Enviar el formulario con el ID de la frase a eliminar
-            document.getElementById('eliminar-form').querySelector('input[name="eliminar_frase"]').value = idFrase;
+        function eliminarTarea(idTarea) {
+            // Enviar el formulario con el ID de la tarea a eliminar
+            document.getElementById('eliminar-form').querySelector('input[name="eliminar_tarea"]').value = idTarea;
             document.getElementById('eliminar-form').submit();
         }
     </script>
 
     <form id="eliminar-form" method="post" style="display: none;">
-        <input type="hidden" name="eliminar_frase" value="">
+        <input type="hidden" name="eliminar_tarea" value="">
     </form>
 
 </body>

@@ -1,5 +1,5 @@
-function guardarFrase() {
-    var frase = document.getElementById('frase').value;
+function guardarTarea() {
+    var tarea = document.getElementById('tarea').value;
     var aux = document.getElementById('aux').value;
     var campo = document.getElementById('campo').value;
     var fechaPlanificada = document.getElementById('fechaPlanificada').value;
@@ -13,11 +13,11 @@ function guardarFrase() {
     xhr.onreadystatechange = function() {
         if (xhr.readyState == 4 && xhr.status == 200) {
             alert(xhr.responseText);
-            // Puedes hacer más cosas después de guardar la frase si es necesario
+            // Puedes hacer más cosas después de guardar la tarea si es necesario
         }
     };
 
-    var datos = 'frase=' + encodeURIComponent(frase) +
+    var datos = 'tarea=' + encodeURIComponent(tarea) +
                 '&aux=' + encodeURIComponent(aux) +
                 '&campo=' + encodeURIComponent(campo) +
                 '&fechaPlanificada=' + encodeURIComponent(fechaPlanificada) +
