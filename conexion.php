@@ -1,5 +1,5 @@
 <?php
-include '/etc/apache2/config.php';
+include 'ignorar/config.php';
 
 // Crear conexión
 $conexion = new mysqli($config['servidor'], $config['usuario'], $config['contrasena'], $config['bd']);
