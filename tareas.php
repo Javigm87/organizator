@@ -4,25 +4,63 @@
     <meta charset="UTF-8">
     <title>Listado de Tareas</title>
     <style>
-        /* ... (tu estilo CSS) */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 20px;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        a {
+            text-decoration: none;
+            color: #007BFF;
+            font-size: 18px;
+            margin-bottom: 10px;
+            display: inline-block;
+        }
+
+        h1 {
+            color: #007BFF;
+            font-size: 28px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+        }
 
         li {
             display: flex;
             justify-content: space-between;
             align-items: center;
+            padding: 15px;
+            border-bottom: 1px solid #ddd;
         }
 
         .eliminar-btn {
             margin-left: auto;
+            background-color: #dc3545;
+            color: #fff;
+            border: none;
+            padding: 8px 12px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .eliminar-btn:hover {
+            background-color: #c82333;
         }
     </style>
 </head>
 <body>
-    <a href="index.html"><<</a>
+    <a href="index.html">Volver a Inicio</a>
     <h1>Listado de Tareas</h1>
 
     <ul>
-        <?php
+    <?php
             // Incluir el archivo de conexión a la base de datos
             include 'conexion.php';
 
@@ -75,7 +113,6 @@
 
     <script>
         function eliminarTarea(idTarea) {
-            // Enviar el formulario con el ID de la tarea a eliminar
             document.getElementById('eliminar-form').querySelector('input[name="eliminar_tarea"]').value = idTarea;
             document.getElementById('eliminar-form').submit();
         }
