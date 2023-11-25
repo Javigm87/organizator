@@ -7,7 +7,7 @@
 <body>
     <form id="formulario">
         <label for="tarea">Ingresa una tarea nueva:</label>
-        <input type="text" id="tarea" name="tarea" required>
+        <input type="text" id="tarea" name="tarea" required style="width: 90%;">
         <br>
 
         <label for="aux">Aux:</label>
@@ -40,5 +40,14 @@
     </form>
     <a href="tareas.php">Mostrar Lista de Tareas</a>
     <script src="guardar.js"></script>
+
+    <script>
+        // Obtener la fecha actual en el formato YYYY-MM-DD
+        var fechaActual = new Date().toISOString().split('T')[0];
+
+        // Establecer la fecha mínima para los elementos date
+        document.getElementById('fechaPlanificada').min = fechaActual;
+        document.getElementById('fechaLimite').min = fechaActual;
+    </script>
 </body>
 </html>
