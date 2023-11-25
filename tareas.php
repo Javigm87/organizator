@@ -5,6 +5,12 @@
     <title>Listado de Tareas</title>
     <style>
         /* ... (tu estilo CSS) */
+
+        li {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
     </style>
 </head>
 <body>
@@ -43,12 +49,14 @@
                 // Iterar sobre los resultados y mostrar cada tarea
                 while($row = $result->fetch_assoc()) {
                     echo "<li>";
+                    echo "<div>";
                     echo "<strong>Tarea:</strong> " . $row["tarea"] . "<br>";
                     echo "<strong>Aux:</strong> " . $row["aux"] . "<br>";
                     echo "<strong>Campo:</strong> " . $row["campo"] . "<br>";
                     echo "<strong>Fecha Planificada:</strong> " . $row["fplanificada"] . "<br>";
                     echo "<strong>Fecha Límite:</strong> " . $row["flimite"] . "<br>";
                     echo "<strong>Periodicidad:</strong> " . $row["periodicidad"] . "<br>";
+                    echo "</div>";
                     echo "<button class='eliminar-btn' onclick='eliminarTarea(" . $row["id"] . ")'>Eliminar</button>";
                     echo "</li>";
                 }
