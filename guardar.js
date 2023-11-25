@@ -1,7 +1,12 @@
 function guardarFrase() {
     var frase = document.getElementById('frase').value;
+    var aux = document.getElementById('aux').value;
+    var campo = document.getElementById('campo').value;
+    var fechaPlanificada = document.getElementById('fechaPlanificada').value;
+    var fechaLimite = document.getElementById('fechaLimite').value;
+    var periodicidad = document.getElementById('periodicidad').value;
 
-    // Enviar la frase al servidor mediante AJAX
+    // Enviar los datos al servidor mediante AJAX
     var xhr = new XMLHttpRequest();
     xhr.open('POST', 'guardar.php', true);
     xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
@@ -11,5 +16,13 @@ function guardarFrase() {
             // Puedes hacer más cosas después de guardar la frase si es necesario
         }
     };
-    xhr.send('frase=' + encodeURIComponent(frase));
+
+    var datos = 'frase=' + encodeURIComponent(frase) +
+                '&aux=' + encodeURIComponent(aux) +
+                '&campo=' + encodeURIComponent(campo) +
+                '&fechaPlanificada=' + encodeURIComponent(fechaPlanificada) +
+                '&fechaLimite=' + encodeURIComponent(fechaLimite) +
+                '&periodicidad=' + encodeURIComponent(periodicidad);
+
+    xhr.send(datos);
 }
