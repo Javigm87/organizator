@@ -102,6 +102,7 @@
                     echo "<li>";
                     echo "<div>";
                     echo $row["tarea"] . " ";
+                    echo " - ";
                     echo $row["aux"] . " ";
                     echo $row["campo"] . " ";
                     echo $row["fplanificada"] . " ";
