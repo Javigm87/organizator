@@ -42,13 +42,15 @@
             if ($result->num_rows > 0) {
                 // Iterar sobre los resultados y mostrar cada tarea
                 while($row = $result->fetch_assoc()) {
-                    echo "<li><strong>Tarea:</strong> " . $row["tarea"] . "<br>";
+                    echo "<li>";
+                    echo "<strong>Tarea:</strong> " . $row["tarea"] . "<br>";
                     echo "<strong>Aux:</strong> " . $row["aux"] . "<br>";
                     echo "<strong>Campo:</strong> " . $row["campo"] . "<br>";
                     echo "<strong>Fecha Planificada:</strong> " . $row["fplanificada"] . "<br>";
                     echo "<strong>Fecha Límite:</strong> " . $row["flimite"] . "<br>";
                     echo "<strong>Periodicidad:</strong> " . $row["periodicidad"] . "<br>";
-                    echo "<button class='eliminar-btn' onclick='eliminarTarea(" . $row["id"] . ")'>Eliminar</button></li>";
+                    echo "<button class='eliminar-btn' onclick='eliminarTarea(" . $row["id"] . ")'>Eliminar</button>";
+                    echo "</li>";
                 }
             } else {
                 echo "<li>No hay tareas disponibles.</li>";
@@ -71,4 +73,4 @@
         <input type="hidden" name="eliminar_tarea" value="">
     </form>
 </body>
-</html
+</html>
