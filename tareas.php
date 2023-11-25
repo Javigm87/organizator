@@ -29,7 +29,7 @@
             padding: 0;
             background-color: #fff;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            border-radius: 5px;
+            border-radius: 5px;           
         }
 
         li {
@@ -38,6 +38,11 @@
             align-items: center;
             padding: 15px;
             border-bottom: 1px solid #ddd;
+            
+        }
+
+        .tarea{
+            font-size: 2rem;
         }
 
         .eliminar-btn {
@@ -100,7 +105,7 @@
                 // Iterar sobre los resultados y mostrar cada tarea
                 while($row = $result->fetch_assoc()) {
                     echo "<li>";
-                    echo '<div style="width: 55%">';
+                    echo '<div class="tarea" style="width: 55%;">';
                     echo $row["tarea"] . " ";
                     echo "</div>";
                     //echo $row["aux"] . " ";
@@ -108,10 +113,10 @@
                     echo $row["campo"] . " ";
                     echo "</div>";
                     echo '<div style="width: 15%">';
-                    echo $row["fplanificada"] . " ";
+                    echo date("d-M", strtotime($row["fplanificada"]));
                     echo "</div>";
                     echo '<div style="width: 15%">';
-                    echo $row["flimite"] . " ";
+                    echo date("d-M", strtotime($row["flimite"]));
                     //echo $row["periodicidad"] . " ";
                     echo "</div>";
                     echo "<button class='eliminar-btn' onclick='eliminarTarea(" . $row["id"] . ")'>Eliminar</button>";
