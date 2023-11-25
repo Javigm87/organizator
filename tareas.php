@@ -53,6 +53,15 @@
         .eliminar-btn:hover {
             background-color: #c82333;
         }
+
+        .tarea-info {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .tarea-info span {
+            margin-bottom: 5px;
+        }
     </style>
 </head>
 <body>
