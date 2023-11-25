@@ -54,12 +54,12 @@
                 while($row = $result->fetch_assoc()) {
                     echo "<li>";
                     echo "<div>";
-                    echo $row["tarea"] . "<br>";
-                    echo $row["aux"] . "<br>";
-                    echo $row["campo"] . "<br>";
-                    echo $row["fplanificada"] . "<br>";
-                    echo $row["flimite"] . "<br>";
-                    echo $row["periodicidad"] . "<br>";
+                    echo $row["tarea"] . " ";
+                    echo $row["aux"] . " ";
+                    echo $row["campo"] . " ";
+                    echo $row["fplanificada"] . " ";
+                    echo $row["flimite"] . " ";
+                    echo $row["periodicidad"] . " ";
                     echo "</div>";
                     echo "<button class='eliminar-btn' onclick='eliminarTarea(" . $row["id"] . ")'>Eliminar</button>";
                     echo "</li>";
