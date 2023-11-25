@@ -100,14 +100,19 @@
                 // Iterar sobre los resultados y mostrar cada tarea
                 while($row = $result->fetch_assoc()) {
                     echo "<li>";
-                    echo "<div>";
+                    echo '<div style="width: 55%">';
                     echo $row["tarea"] . " ";
-                    echo " - ";
-                    echo $row["aux"] . " ";
+                    echo "</div>";
+                    //echo $row["aux"] . " ";
+                    echo '<div style="width: 15%">';
                     echo $row["campo"] . " ";
+                    echo "</div>";
+                    echo '<div style="width: 15%">';
                     echo $row["fplanificada"] . " ";
+                    echo "</div>";
+                    echo '<div style="width: 15%">';
                     echo $row["flimite"] . " ";
-                    echo $row["periodicidad"] . " ";
+                    //echo $row["periodicidad"] . " ";
                     echo "</div>";
                     echo "<button class='eliminar-btn' onclick='eliminarTarea(" . $row["id"] . ")'>Eliminar</button>";
                     echo "</li>";
