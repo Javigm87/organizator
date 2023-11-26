@@ -7,7 +7,7 @@
 <body>
     <form id="formulario">
         <label for="tarea">Ingresa una tarea nueva:</label>
-        <input type="text" id="tarea" name="tarea" required style="width: 90%;">
+        <input style="width: 90%;" type="text" id="tarea" name="tarea" maxlength="36" required>
         <br>
 
         <label for="aux">Aux:</label>
