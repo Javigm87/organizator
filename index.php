@@ -25,11 +25,11 @@
         <br>
 
         <label for="fechaPlanificada">Fecha planificada:</label>
-        <input type="date" id="fechaPlanificada" name="fechaPlanificada" required>
+        <input type="date" id="fechaPlanificada" name="fechaPlanificada" value=<?php $hoy=date("Y-m-d"); echo $hoy;?> min=<?php $hoy=date("Y-m-d"); echo $hoy;?> required>
         <br>
 
         <label for="fechaLimite">Fecha límite:</label>
-        <input type="date" id="fechaLimite" name="fechaLimite" required>
+        <input type="date" id="fechaLimite" name="fechaLimite" value=<?php $hoy=date("Y-m-d"); echo $hoy;?> min=<?php $hoy=date("Y-m-d"); echo $hoy;?> required>
         <br>
 
         <label for="periodicidad">Periodicidad:</label>
@@ -41,13 +41,6 @@
     <a href="tareas.php">Mostrar Lista de Tareas</a>
     <script src="guardar.js"></script>
 
-    <script>
-        // Obtener la fecha actual en el formato YYYY-MM-DD
-        var fechaActual = new Date().toISOString().split('T')[0];
 
-        // Establecer la fecha mínima para los elementos date
-        document.getElementById('fechaPlanificada').min = fechaActual;
-        document.getElementById('fechaLimite').min = fechaActual;
-    </script>
 </body>
 </html>
