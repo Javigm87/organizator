@@ -41,6 +41,8 @@
             width: 49%;
             font-size: 3rem;
             box-sizing: border-box;
+            margin: 0px 5px 15px 5px;
+            /* arriba, derecha, abajo, izquierda */
         }
 
         input[type="number"] {
@@ -50,12 +52,14 @@
 
         .button-enviar {
             font-size: 3rem;
+            margin-bottom: 20px;
         }
 
         #tarea{
             width: 100%;
             font-size: 3rem;
             box-sizing: border-box;
+            margin-bottom: 15px;
         }
         
         #campo{
@@ -71,10 +75,7 @@
             width: 47.7%;
         }
 
-        .tarea{
-            font-size: 2rem;
-        }
-
+        
         .eliminar-btn {
             margin-left: auto;
             background-color: #dc3545;
