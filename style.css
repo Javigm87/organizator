@@ -1,3 +1,5 @@
+
+
         body {
             font-family: 'Arial', sans-serif;
             margin: 20px;
@@ -35,6 +37,13 @@
             
         }
 
+        #tarea{
+            width: 100%;
+            font-size: 3rem;   
+        }
+        
+
+
         .tarea{
             font-size: 2rem;
         }
@@ -61,3 +70,4 @@
         .tarea-info span {
             margin-bottom: 5px;
         }
+

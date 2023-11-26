@@ -3,11 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <title>Organizator</title>
+    <style>
+        @import url(style.css);
+    </style>
 </head>
 <body>
-    <form id="formulario">
-        <label for="tarea">Ingresa una tarea nueva:</label>
-        <input style="width: 90%;" type="text" id="tarea" name="tarea" maxlength="36" required>
+    <form id="formulario">        
+        <input type="text" id="tarea" name="tarea" maxlength="36" placeholder="Ingresa aquí la tarea" required >
         <br>
 
         <label for="aux">Aux:</label>
