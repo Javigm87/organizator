@@ -1,6 +1,6 @@
 function guardarTarea() {
     var tarea = document.getElementById('tarea').value;
-    var aux = document.getElementById('aux').value;
+    //var aux = document.getElementById('aux').value;
     var campo = document.getElementById('campo').value;
     var fechaPlanificada = document.getElementById('fechaPlanificada').value;
     var fechaLimite = document.getElementById('fechaLimite').value;
@@ -18,7 +18,7 @@ function guardarTarea() {
     };
 
     var datos = 'tarea=' + encodeURIComponent(tarea) +
-                '&aux=' + encodeURIComponent(aux) +
+                //'&aux=' + encodeURIComponent(aux) +
                 '&campo=' + encodeURIComponent(campo) +
                 '&fechaPlanificada=' + encodeURIComponent(fechaPlanificada) +
                 '&fechaLimite=' + encodeURIComponent(fechaLimite) +

@@ -2,7 +2,7 @@
 
         body {
             font-family: 'Arial', sans-serif;
-            margin: 20px;
+            /* margin: 20px; */
             background-color: #f4f4f4;
             color: #333;
         }
@@ -11,7 +11,7 @@
             text-decoration: none;
             color: #007BFF;
             font-size: 18px;
-            margin-bottom: 10px;
+            /* margin-bottom: 10px; */
             display: inline-block;
         }
 
@@ -37,12 +37,34 @@
             
         }
 
+        input[type="date"] {
+            width: 47.7%;
+            font-size: 3rem;
+        }
+
+        input[type="number"] {
+            width: 6%;
+            font-size: 3rem;
+        }
+
         #tarea{
-            width: 90%;
-            font-size: 3rem;   
+            width: 96%;
+            font-size: 3rem;
+            box-sizing: border-box;
         }
         
+        #campo{
+            width: 47.7%;
+            font-size: 3rem;
+            box-sizing: border-box;
+            margin-right: 2%;
+        }
 
+
+        .periodo {
+            font-size: 3rem;
+            width: 47.7%;
+        }
 
         .tarea{
             font-size: 2rem;
