@@ -38,8 +38,9 @@
         }
 
         input[type="date"] {
-            width: 47.7%;
+            width: 49%;
             font-size: 3rem;
+            box-sizing: border-box;
         }
 
         input[type="number"] {
@@ -47,8 +48,12 @@
             font-size: 3rem;
         }
 
+        .button-enviar {
+            font-size: 3rem;
+        }
+
         #tarea{
-            width: 96%;
+            width: 100%;
             font-size: 3rem;
             box-sizing: border-box;
         }

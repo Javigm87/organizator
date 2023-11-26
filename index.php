@@ -35,9 +35,8 @@
         <input type="number" id="periodicidad" name="periodicidad" required>
         días
         </span>
-        <br>
-
-        <button type="button" onclick="guardarTarea()">Enviar</button>
+        <br><hr>
+        <button class="button-enviar" type="button" onclick="guardarTarea()">Enviar</button>
     </form>
     <a href="tareas.php">Mostrar Lista de Tareas</a>
     <script src="guardar.js"></script>

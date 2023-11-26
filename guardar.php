@@ -13,9 +13,6 @@ $fechaLimite = $_POST['fechaLimite'];
 $periodicidad = $_POST['periodicidad'];
 
 
-//print_r($_POST);
-
-
 
 // Preparar la sentencia SQL
 $sql = "INSERT INTO tareas (tarea, campo, fplanificada, flimite, periodicidad) 
